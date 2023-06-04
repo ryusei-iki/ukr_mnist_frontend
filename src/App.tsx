@@ -5,7 +5,9 @@ import { Button, Grid } from "@mui/material";
 type MouseEvent_<E = unknown> = React.MouseEvent<E, MouseEvent>
 
 
-const env: string = 'local'
+const env: string = 'production'
+// const env: string = 'local'
+
 
 function App() {
   const [z, setZ] = useState<number[][]>([])
@@ -17,7 +19,7 @@ function App() {
         return "http://127.0.0.1:8000/return_z"
       }
       else if (env == 'production') {
-        return "https://mnist_ukr-1-x6245667.deta.app/rerurn_z"
+        return "https://mnist_ukr-1-x6245667.deta.app/return_z"
       }
       else {
         return ''
